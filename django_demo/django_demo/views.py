@@ -4,8 +4,8 @@ from . import tasks
 
 
 def hello_world(request):
-    output_string = "<h1>Hello world from: {}".format(
-        os.environ.get("HOSTNAME", "no_host")
+    output_string = (
+        f'<h1>Hello world from: {os.environ.get("HOSTNAME", "no_host")}'
     )
 
     return HttpResponse(output_string)
